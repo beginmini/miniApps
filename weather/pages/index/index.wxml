@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view>{{inputValue}}</view> -->
+ <input placeholder="请输入城市名称"  bindinput='bindKeyInput'/>
+ <button bindtap='searchWeather'>查询</button>
+
+ <scroll-view scroll-y style="height: 200px;" >
+    <view wx:for="{{weatherDatas}}" wx:key="*this">
+    日期：{{item.date}}
+    温度：{{item.temperature}}
+    星期：{{item.week}}
+    风向：{{item.wind}}
+    </view>
+  </scroll-view>
+</view>
+
